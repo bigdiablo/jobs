@@ -16,7 +16,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eee;
 }
 
 *,
@@ -43,10 +42,9 @@ p {
 section {
     display: flex;
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 150px);
     margin-top: 80px;
     border: 1px solid sandybrown;
-    background-color: #fff;
 }
 
 ul {
@@ -105,7 +103,6 @@ nav {
     width: 100%;
     height: 80px;
     padding: 0 24px;
-    background-color: #fff;
     border: 1px solid #000;
 }
 
@@ -127,9 +124,8 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 80px;
+    height: 60px;
     margin: 0 auto;
-    background-color: #fff;
     border: 1px solid #000;
 }
 

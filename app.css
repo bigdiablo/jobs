@@ -462,9 +462,377 @@ footer {
     text-decoration: underline;
 }
 
+/* CV Styles */
+.cv-section {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 140px);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.cv-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    padding: 24px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.cv-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.cv-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.cv-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+}
+
+.cv-icon {
+    display: none;
+}
+
+.cv-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.cv-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.cv-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cv-section-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.section-title svg {
+    width: 20px;
+    height: 20px;
+    color: salmon;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cv-form .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cv-form input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    height: 48px;
+}
+
+.cv-form input:focus {
+    outline: none;
+    border-color: salmon;
+    box-shadow: 0 0 0 4px rgba(250, 128, 114, 0.15);
+}
+
+.experience-item,
+.education-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #fff;
+    color: salmon;
+    border: 2px dashed salmon;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-btn:hover {
+    background-color: salmon;
+    color: #fff;
+    border-style: solid;
+}
+
+.add-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background-color: salmon;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.skill-item button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skill-item button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.skill-item button svg {
+    width: 10px;
+    height: 10px;
+}
+
+.cv-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.preview-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background-color: #fff;
+    color: #666;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.preview-btn:hover {
+    border-color: salmon;
+    color: salmon;
+    box-shadow: 0 4px 12px rgba(250, 128, 114, 0.2);
+}
+
+.preview-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.save-btn {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, salmon, #ff8a65);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.save-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.save-btn:hover::before {
+    left: 100%;
+}
+
+.save-btn:hover {
+    background: linear-gradient(135deg, #e8775a, #ff7043);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 128, 114, 0.4);
+}
+
+.save-btn .btn-icon svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.save-btn:hover .btn-icon svg {
+    transform: translateX(2px);
+}
+
 @media only screen and (max-width: 920px) {
     .login-card {
         padding: 24px;
         margin: 16px;
     }
+    
+    .cv-section {
+        top: 80px;
+        height: calc(100vh - 140px);
+    }
+    
+    .cv-header {
+        padding: 16px;
+    }
+    
+    .cv-content {
+        padding: 16px;
+    }
+    
+    .cv-container {
+        padding: 0;
+    }
+    
+    .cv-card {
+        padding: 0;
+        gap: 24px;
+    }
+    
+    .cv-form {
+        gap: 32px;
+    }
+    
+    .cv-section-group {
+        gap: 20px;
+    }
+    
+    .experience-item,
+    .education-item {
+        padding: 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .cv-actions {
+        flex-direction: column;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+
 }

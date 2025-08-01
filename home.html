@@ -300,5 +300,39 @@ var loveListener = createButtonListener(true);
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
 
+// Agregar funcionalidad de clic a las cards para ir a offer.html
+document.addEventListener('DOMContentLoaded', function() {
+  function addCardClickListeners() {
+    var cards = document.querySelectorAll('.job:not(.removed)');
+    cards.forEach(function(card) {
+      // Remover listener anterior si existe
+      card.removeEventListener('click', cardClickHandler);
+      // Agregar nuevo listener
+      card.addEventListener('click', cardClickHandler);
+      card.style.cursor = 'pointer';
+    });
+  }
+  
+  function cardClickHandler(event) {
+    // Evitar que se active cuando se arrastra
+    if (event.target.closest('.job').classList.contains('moving')) {
+      return;
+    }
+    window.location.href = 'offer.html';
+  }
+  
+  // Inicializar listeners
+  addCardClickListeners();
+  
+  // Re-agregar listeners cuando se inicialicen nuevas cards
+  var originalInitCards = window.initCards;
+  window.initCards = function() {
+    if (originalInitCards) {
+      originalInitCards();
+    }
+    addCardClickListeners();
+  };
+});
+
 </script>
 </html>
